@@ -6,10 +6,6 @@ const publicRoutes = [
         path: "/",
         component: Home,
     },
-    {
-        path: "/s3",
-        component: S3Storage,
-    },
 ];
 
 export default publicRoutes;
