@@ -1,15 +1,15 @@
 import { useEffect } from "react";
 import api from "@modules/api";
 
-const Home = () => {
+const Test = () => {
     useEffect(() => {
         api.get('').then(({status}) => {
             console.log(status);
         });
     }, []);
     return <>
-        Home page
+        Test page
     </>
 }
 
-export default Home;
+export default Test;

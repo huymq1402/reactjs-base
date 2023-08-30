@@ -1,10 +1,14 @@
 import Home from "../containers/Home";
-import S3Storage from "../containers/S3Storage";
+import Test from "../containers/Test";
 
 const publicRoutes = [
     {
         path: "/",
         component: Home,
+    },
+    {
+        path: "/test",
+        component: Test,
     },
 ];
 
