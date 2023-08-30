@@ -6,7 +6,7 @@ const S3Storage = () => {
         <>
             <FileManager
                 // containerStyle={{ width: 900, height: 500 }}
-                containerStyle={{ width: "100%", height: "calc(100% - 10px)" }}
+                containerStyle={{ width: "100%", height: "100%" }}
                 // withHeader
                 // withShadow
                 visible
@@ -15,8 +15,11 @@ const S3Storage = () => {
                 }}
                 onListFolders={(parent_id = null) => {
                     return new Promise((resolve, reject) => {
-                        api.get("storage/list-folders", {
-                            params: { parent_id },
+                        api.get("/admin/s3_storage", {
+                            params: {
+                                _filters: `{"parent_id":"${parent_id}","type":"folder"}`,
+                                _paging: 0
+                            },
                         })
                             .then(({ status, data }) => {
                                 if (status && Array.isArray(data)) {
@@ -30,8 +33,11 @@ const S3Storage = () => {
                 }}
                 onListFiles={(parent_id = null) => {
                     return new Promise((resolve, reject) => {
-                        api.get("storage/list-files", {
-                            params: { parent_id },
+                        api.get("/admin/s3_storage", {
+                            params: {
+                                _filters: `{"parent_id":${parent_id}}`,
+                                _paging: 0
+                            },
                         })
                             .then(({ status, data }) => {
                                 if (status && Array.isArray(data)) {

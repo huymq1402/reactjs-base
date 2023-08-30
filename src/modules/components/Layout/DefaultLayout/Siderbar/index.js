@@ -1,8 +1,7 @@
 import { useMemo, useState } from 'react';
-import { AppstoreOutlined, MailOutlined, SettingOutlined, AntDesignOutlined } from '@ant-design/icons';
+import { AppstoreOutlined, SettingOutlined, AntDesignOutlined } from '@ant-design/icons';
 import { Avatar, Layout, Menu, Switch } from 'antd';
-import './siderbar.scss';
-const { Header, Content, Footer, Sider } = Layout;
+const { Sider } = Layout;
 function Siderbar() {
     const [theme, setTheme] = useState('light');
     const [collapsed, setCollapsed] = useState(false);
@@ -21,21 +20,21 @@ function Siderbar() {
         //     getItem('Item 2', 'g2', null, [getItem('Option 3', '3'), getItem('Option 4', '4')], 'group'),
         // ]),
         // getItem('Group', 'grp', null, [getItem('Option 13', '13'), getItem('Option 14', '14')], 'group'),
-        getItem('Group', 'grp', <AppstoreOutlined />),
-        getItem('Navigation Two', 'sub2', <AppstoreOutlined />, [
-            getItem('Option 5', '5'),
-            getItem('Option 6', '6'),
-            getItem('Submenu', 'sub3', null, [getItem('Option 7', '7'), getItem('Option 8', '8')]),
-        ]),
-        {
-            type: 'divider',
-        },
-        getItem('Navigation Three', 'sub4', <SettingOutlined />, [
-            getItem('Option 9', '9'),
-            getItem('Option 10', '10'),
-            getItem('Option 11', '11'),
-            getItem('Option 12', '12'),
-        ]),
+        getItem('S3 Storage', 'grp', <AppstoreOutlined />),
+        // getItem('Navigation Two', 'sub2', <AppstoreOutlined />, [
+        //     getItem('Option 5', '5'),
+        //     getItem('Option 6', '6'),
+        //     getItem('Submenu', 'sub3', null, [getItem('Option 7', '7'), getItem('Option 8', '8')]),
+        // ]),
+        // {
+        //     type: 'divider',
+        // },
+        // getItem('Navigation Three', 'sub4', <SettingOutlined />, [
+        //     getItem('Option 9', '9'),
+        //     getItem('Option 10', '10'),
+        //     getItem('Option 11', '11'),
+        //     getItem('Option 12', '12'),
+        // ]),
     ];
 
     const onClick = (e) => {
@@ -51,7 +50,6 @@ function Siderbar() {
     }, [collapsed]);
 
     return <Layout className="siderbar">
-        {console.log(size)}
         <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
             <Avatar
                 className="avatar"

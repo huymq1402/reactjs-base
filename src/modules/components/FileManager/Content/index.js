@@ -11,13 +11,13 @@ function initCached() {
     try {
         const data = JSON.parse(window.localStorage.getItem("__files"));
         return data ? data : {};
-    } catch (e) {}
+    } catch (e) { }
     return {};
 }
 
 let __cached = initCached();
 
-const Content = ({ controller, listFiles = () => {}, selectFile = () => {}, uploadFiles = () => {} }) => {
+const Content = ({ controller, listFiles = () => { }, selectFile = () => { }, uploadFiles = () => { } }) => {
     const [parent, setParent] = useState(null);
     const [items, setItems] = useState([]);
     const [openingId, setOpeningId] = useState(null);
@@ -94,7 +94,7 @@ const Content = ({ controller, listFiles = () => {}, selectFile = () => {}, uplo
                     boxRef.current.scrollTop = 0;
                 }).catch(({ message }) => {
                     message && controller.call("notification.show", message);
-                    wrapRef.current.classList.remove("files-loading");
+                    wrapRef.current && wrapRef.current.classList.remove("files-loading");
                     setOpeningId(null);
                     setItems([]);
                     resolve();
@@ -239,15 +239,15 @@ const Content = ({ controller, listFiles = () => {}, selectFile = () => {}, uplo
     }, [indexs]);
 
     function boxesIntersect(box, item) {
-        const box_top = box.top;
-        const box_left = box.left;
-        const box_bottom = box.top + box.height;
-        const box_right = box.left + box.width;
+        const box_top = box?.top;
+        const box_left = box?.left;
+        const box_bottom = box?.top + box?.height;
+        const box_right = box?.left + box?.width;
 
-        const point_top = item.offsetTop;
-        const point_left = item.offsetLeft;
-        const point_bottom = item.offsetTop + item.offsetHeight;
-        const point_right = item.offsetLeft + item.offsetWidth;
+        const point_top = item?.offsetTop;
+        const point_left = item?.offsetLeft;
+        const point_bottom = item?.offsetTop + item?.offsetHeight;
+        const point_right = item?.offsetLeft + item?.offsetWidth;
 
         return !(box_top > point_bottom || box_right < point_left || box_bottom < point_top || box_left > point_right);
     }

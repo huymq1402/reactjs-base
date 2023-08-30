@@ -30,7 +30,14 @@ module.exports = {
                     // Compiles Sass to CSS
                     "sass-loader",
                 ],
-            }
+            },
+            {
+                test: /\.svg$/, // Sử dụng @svgr/webpack (dùng svg như React components) / file-loader (dùng svg như url) cho các file png, svg, ....
+                use: [
+                    '@svgr/webpack',
+                    'file-loader',
+                ],
+            },
         ]
     },
     resolve: {
