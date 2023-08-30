@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const webpack = require('webpack')
-const env = (process.env.ENV == "production" || process.env.ENV == "prod") ? "prod" : "dev";
+const env = (process.env.NODE_ENV == "production" || process.env.NODE_ENV == "prod") ? "prod" : "dev";
 const CONFIG_PATH = path.resolve(`src/configs/config.${env}.js`);
 module.exports = {
     entry: "./src/index.js", // Dẫn tới file index.js ta đã tạo
