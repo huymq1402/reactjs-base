@@ -1,5 +1,5 @@
-import Home from "../containers/Home";
-import Test from "../containers/Test";
+import Home from "@containers/Home";
+import Test from "@containers/Test";
 
 const publicRoutes = [
     {

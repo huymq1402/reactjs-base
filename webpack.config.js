@@ -38,8 +38,10 @@ module.exports = {
             "@config": CONFIG_PATH,
             "src": path.resolve("src"),
             "@modules": path.resolve("src/modules"),
+            "@routes": path.resolve("src/modules/routes"),
             "@containers": path.resolve("src/modules/containers"),
             "@components": path.resolve("src/modules/components"),
+            "@navigations": path.resolve("src/modules/navigations"),
         }
     },
     devServer: {

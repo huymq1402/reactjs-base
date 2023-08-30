@@ -1,8 +1,8 @@
 import { useMemo, useState } from 'react';
 import { AntDesignOutlined } from '@ant-design/icons';
 import { Avatar, Layout, Menu, Switch } from 'antd';
-import menuConfigs from '../../../../navigations';
 import { useNavigate } from 'react-router';
+import menuConfigs from '@navigations';
 const { Sider } = Layout;
 function Siderbar() {
     const navigate = useNavigate();

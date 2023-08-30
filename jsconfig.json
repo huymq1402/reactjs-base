@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "allowSyntheticDefaultImports": false,
+        "baseUrl": "./",
+        "paths": {
+            "src/*": ["src/*"],
+            "@api": ["src/modules/api/index.js"],
+            // "@utils": ["src/utils"],
+            // "@utils/*": ["src/utils/*"],
+            "@modules/*": ["src/modules/*"],
+            "@api/*": ["src/modules/api/*"],
+            "@containers/*": ["src/modules/containers/*"],
+            "@components/*": ["src/modules/components/*"],
+            "@navigations": ["src/modules/navigations"],
+            "@navigations/*": ["src/modules/navigations/*"],
+            // "@actions/*": ["src/actions/*"],
+            // "@reducers": ["src/reducers"],
+            // "@reducers/*": ["src/reducers/*"],
+            // "@assets/*": ["src/assets/*"],
+            // "@lang": ["src/lang"],
+            // "@lang/*": ["src/lang/*"],
+            "@config": ["config.dev.js"],
+            "@hooks": ["src/hooks"],
+            "@hooks/*": ["src/hooks/*"],
+            // "@fetchs": ["src/fetchs"],
+            // "@fetchs/*": ["src/fetchs/*"]
+        }
+    },
+    "exclude": ["node_modules", "build"]
+}
