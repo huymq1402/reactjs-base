@@ -1,0 +1,39 @@
+.siderbar {
+    min-height: 100vh;
+    border-right: 1px solid #0505050f;
+    display: flex;
+
+    .ant-layout-sider-children {
+        background: white;
+        color: #002140;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .ant-menu {
+            border: 0;
+        }
+
+        .avatar {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .ant-layout-sider-trigger {
+        background: #eeeeeedc;
+        color: #002140;
+    }
+}
+
+// @media (max-width: 991px) {
+// .siderbar {
+//     width: fit-content;
+//     .ant-layout-sider-children {
+//         w
+//         .ant-menu {
+//             w
+//         }
+//     }
+// }
+// }
