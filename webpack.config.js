@@ -37,7 +37,9 @@ module.exports = {
         alias: {
             "@config": CONFIG_PATH,
             "src": path.resolve("src"),
+            "@utils": path.resolve("src/utils"),
             "@modules": path.resolve("src/modules"),
+            "@api": path.resolve("src/modules/api"),
             "@routes": path.resolve("src/modules/routes"),
             "@containers": path.resolve("src/modules/containers"),
             "@components": path.resolve("src/modules/components"),

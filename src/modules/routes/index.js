@@ -1,5 +1,6 @@
 import Home from "@containers/Home";
 import Test from "@containers/Test";
+import Login from "@containers/Login";
 
 const publicRoutes = [
     {
@@ -9,6 +10,10 @@ const publicRoutes = [
     {
         path: "/test",
         component: Test,
+    },
+    {
+        path: "/login",
+        component: Login,
     },
 ];
 

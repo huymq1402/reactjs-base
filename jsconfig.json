@@ -7,10 +7,10 @@
         "paths": {
             "src/*": ["src/*"],
             "@api": ["src/modules/api/index.js"],
-            // "@utils": ["src/utils"],
-            // "@utils/*": ["src/utils/*"],
-            "@modules/*": ["src/modules/*"],
             "@api/*": ["src/modules/api/*"],
+            "@utils": ["src/utils"],
+            "@utils/*": ["src/utils/*"],
+            "@modules/*": ["src/modules/*"],
             "@containers/*": ["src/modules/containers/*"],
             "@components/*": ["src/modules/components/*"],
             "@navigations": ["src/modules/navigations"],

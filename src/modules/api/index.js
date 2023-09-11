@@ -1,20 +1,20 @@
 import axios from "axios";
 import Config from "@config";
-// import { removeToken, storeToken } from "@utils/auth";
+import { getToken, removeToken, storeToken } from "@utils/auth";
 // import history from "src/history";
 // import { createValidItems, findFirstValidItem, findValidItemFromUrl } from "./mock/items";
 
 const params = { locale: localStorage.getItem("locale") };
-if (!Config.BROWSER) {
-    params.mobile = true;
-}
+
 let normalAxios = axios.create({
-    baseURL: Config.API_URL,
+    baseURL: Config.API_URL +"/admin",
     headers: {
         "Content-Type": "application/json",
     },
     params,
 });
+
+normalAxios.defaults.headers.common["Authorization"] = "Bearer " + getToken();
 
 const defaultGetParams = {};
 
@@ -52,7 +52,7 @@ normalAxios.interceptors.response.use(
     (error) => {
         if (error?.response?.status === 401) {
             removeToken();
-            sessionStorage.setItem("__redirectUrl", window.location.pathname);
+            // sessionStorage.setItem("__redirectUrl", window.location.pathname);
             if (window.location.pathname !== "/login") {
                 window.location.href = "/login";
             }
@@ -82,6 +82,11 @@ normalAxios.interceptors.response.use(
                     if (window.location.pathname !== "/login") {
                         window.location.href = "/login";
                     }
+                }
+            } else {
+                removeToken();
+                if (window.location.pathname !== "/login") {
+                    window.location.href = "/login";
                 }
             }
         } else if (error?.response?.status === 503) {
