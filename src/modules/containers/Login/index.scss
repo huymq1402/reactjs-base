@@ -1,0 +1,23 @@
+.login {
+    display: flex;
+    justify-content: center;
+    background-color: #F0F6FB;
+    min-height: 100vh;
+    padding: 50px;
+
+    .inner {
+        width: 600px;
+        background-color: #FFF;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+
+        .title {}
+
+        .login-form {
+            margin-top: 30px;
+        }
+    }
+}
