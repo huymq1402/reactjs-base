@@ -9,8 +9,8 @@ const menuConfigs = [
         children: [],
     },
     {
-        key: "/test",
-        title: "Test",
+        key: "/list",
+        title: "List",
         icon: <AppstoreOutlined />,
         type: undefined, // "group" | "divider" | undefined
         children: [],

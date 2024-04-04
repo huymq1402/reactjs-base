@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import api from "@modules/api";
 
-const Test = () => {
+const List = () => {
     useEffect(() => {
 
     }, []);
     return <>
-        Test page
+        List page
     </>
 }
 
-export default Test;
+export default List;

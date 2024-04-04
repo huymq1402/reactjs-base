@@ -1,5 +1,5 @@
 import Home from "@containers/Home";
-import Test from "@containers/Test";
+import List from "src/modules/containers/List";
 import Login from "@containers/Login";
 
 const publicRoutes = [
@@ -8,8 +8,8 @@ const publicRoutes = [
         component: Home,
     },
     {
-        path: "/test",
-        component: Test,
+        path: "/list",
+        component: List,
     },
     {
         path: "/login",
