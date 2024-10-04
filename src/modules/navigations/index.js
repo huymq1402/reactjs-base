@@ -9,11 +9,19 @@ const menuConfigs = [
         children: [],
     },
     {
-        key: "/list",
-        title: "List",
+        key: "/template",
+        title: "Template",
         icon: <AppstoreOutlined />,
         type: undefined, // "group" | "divider" | undefined
-        children: [],
-    },
+        children: [
+            {
+                key: "/list",
+                title: "List",
+                icon: <AppstoreOutlined />,
+                type: undefined, // "group" | "divider" | undefined
+                children: [],
+            }
+        ],
+    }
 ]
 export default menuConfigs;

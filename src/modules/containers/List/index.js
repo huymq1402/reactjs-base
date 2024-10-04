@@ -1,13 +1,8 @@
-import { useEffect } from "react";
-import api from "@modules/api";
+import ListView from "src/modules/components/ListView";
 
-const List = () => {
-    useEffect(() => {
+const ListData = () => {
 
-    }, []);
-    return <>
-        List page
-    </>
+    return <ListView apiPath="" />;
 }
 
-export default List;
+export default ListData;

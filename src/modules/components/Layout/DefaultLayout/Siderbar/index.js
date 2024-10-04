@@ -46,9 +46,9 @@ function Siderbar() {
                 let chilrenItems = children.map(({ key, title, children, icon }) => {
                     return getItem(title, key, icon || null, null, type)
                 });
-                return getItem(title, key, icon || null, chilrenItems.length || null, type)
+                return getItem(title, key, icon || null, chilrenItems.length > 0 ? chilrenItems : null, type)
             });
-            return getItem(title, key, icon || null, chilrenItems.length || null, type)
+            return getItem(title, key, icon || null, chilrenItems.length > 0 ? chilrenItems : null, type)
         });
     }, []);
 

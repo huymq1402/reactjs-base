@@ -4,6 +4,9 @@ const webpack = require('webpack')
 const env = (process.env.NODE_ENV == "production" || process.env.NODE_ENV == "prod") ? "prod" : "dev";
 const CONFIG_PATH = path.resolve(`src/configs/config.${env}.js`);
 module.exports = {
+    devServer: {
+        port: 3000
+    },
     entry: "./src/index.js", // Dẫn tới file index.js ta đã tạo
     output: {
         path: path.join(__dirname, "/build"), // Thư mục chứa file được build ra

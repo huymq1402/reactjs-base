@@ -1,4 +1,4 @@
 module.exports = {
-    BASE_URL: "http://api.question.lc",
-    API_URL: "http://api.question.lc/api",
+    BASE_URL: "https://api.question.lc",
+    API_URL: "https://api.question.lc/api",
 }

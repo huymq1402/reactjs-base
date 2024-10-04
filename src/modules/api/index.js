@@ -7,7 +7,7 @@ import { getToken, removeToken, storeToken } from "@utils/auth";
 const params = { locale: localStorage.getItem("locale") };
 
 let normalAxios = axios.create({
-    baseURL: Config.API_URL +"/admin",
+    baseURL: Config.API_URL + "",
     headers: {
         "Content-Type": "application/json",
     },
